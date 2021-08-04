@@ -13,20 +13,61 @@
 // // Add event listener to generate button
 // generateBtn.addEventListener("click", writePassword);
 
+// Start
+
+const alpha = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+const numbers = "0123456789";
+const symbols = "!@#$%^&*_-+=";
+
+const writePassword = (length, characters) => {
+  let password = "";
+  for (let i = 0; i < length; i++) {
+    password += characters.charAt(
+      Math.floor(Math.random() * characters.length)
+    );
+  }
+  return password;
+  console.log("connected");
+};
+
 
 function writePassword() {
-  console.log("connected");
   
-  var passwordText = document.getElementById("#password");
-  var lets = "abcdefghijklmnopqrstuvwxyz";
-  var numbs = "0123456789"
-  var puncts = '!@#$%^&*()_+~`|}{[]\:;?><,./-=';
-  console.log(abc);
+  
+
+
+  var password = generatePassword();
+  var passwordText = document.querySelector("#password");
+
+  // var passwordText = document.getElementById("#password");
+  // var lets = "abcdefghijklmnopqrstuvwxyz";
+  // var numbs = "0123456789"
+  // var puncts = '!@#$%^&*()_+~`|}{[]\:;?><,./-=';
+  
+  const generatePassword(length, characters) => {
+    let password = "";
+    for (let i = 0; i < length; i++) {
+      password += characters.charAt(
+        Math.floor(Math.random() * characters.length)
+      );
+    }
+    return password;
+  };
   
 
 
 
 }
+
+// const generatePassword = (length, characters) => {
+//   let password = "";
+//   for (let i = 0; i < length; i++) {
+//     password += characters.charAt(
+//       Math.floor(Math.random() * characters.length)
+//     );
+//   }
+//   return password;
+// };
 
 
 // const copyBtn = document.getElementById("copy");
